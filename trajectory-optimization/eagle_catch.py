@@ -1,5 +1,6 @@
 import sys
 import time
+import os
 
 import crocoddyl
 import eagle_mpc
@@ -17,12 +18,12 @@ trajectoryName = 'eagle_catch'
 
 trajectory = eagle_mpc.Trajectory()
 
-trajectory.autoSetup("/home/pepms/wsros/mpc-ws/src/multicopter_mpc/multicopter_mpc_yaml/trajectories/" + robotName +
-                     '_' + trajectoryName + ".yaml")
+rootPath = os.getcwd()
+trajectory.autoSetup(rootPath + "/trajectories_yaml/" + robotName + '_' + trajectoryName + ".yaml")
 
 problem = trajectory.createProblem(dt, useSquash, "IntegratedActionModelEuler")
 
-solver = multicopter_mpc.SolverSbFDDP(problem, trajectory.squash)
+solver = eagle_mpc.SolverSbFDDP(problem, trajectory.squash)
 
 callbacks = [crocoddyl.CallbackVerbose()]
 solver.setCallbacks(callbacks)

@@ -1,10 +1,11 @@
-import numpy as np
+import os
 import copy
+import numpy as np
 
 import pinocchio
 import crocoddyl
 import example_robot_data
-import multicopter_mpc
+import eagle_mpc
 
 
 def createModels(squashModel, tauF):
@@ -60,9 +61,10 @@ def boxDeploymentProblem(dt):
     robotName = 'hexacopter680_flying_arm_2'
     trajectoryName = 'hover'
 
-    trajectory = multicopter_mpc.Trajectory()
-    trajectory.autoSetup("/home/pepms/wsros/mpc-ws/src/multicopter_mpc/multicopter_mpc_yaml/trajectories/" +
-                         robotName + '_' + trajectoryName + ".yaml")
+    trajectory = eagle_mpc.Trajectory()
+    rootPath = os.getcwd()
+    trajectory.autoSetup(rootPath + "/trajectories_yaml/" + robotName + '_' + trajectoryName + ".yaml")
+
     tauLb = copy.copy(trajectory.squash.s_lb)
     tauUb = copy.copy(trajectory.squash.s_ub)
     tauLb[-2:] = np.ones(2) * -5

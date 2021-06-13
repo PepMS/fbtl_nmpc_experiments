@@ -20,7 +20,7 @@ git clone https://github.com/PepMS/fbtl_nmpc_experiments.git
 ### <a name="to"></a> Trajectory optimization
 To run a trajectory optimization, you need to execute the python scripts with the `display` option in case that you want to visualize this in the Gepetto-Viewer. For example, for the *Eagle's Catch* case:
 ```
-cd fbtl_nmpc_experiments/trajectory-optimization
+cd <choose-your-path>/fbtl_nmpc_experiments/trajectory-optimization
 python3 eagle_catch.py display
 ```
 ### <a name="mpc"></a> nonLinear Model Predictive Control

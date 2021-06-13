@@ -1,2 +1,2 @@
 import pinocchio
-import multicopter_mpc
+import eagle_mpc
