@@ -29,8 +29,8 @@ python3 eagle_catch.py display
 To run an nMPC experiment.
 1. Open the script of the experiment you want to run. For example `mpc/displacement/displacement.py`
 2. Set the variables in the section `# -----VARIABLES-----` to match your settings.
-2.1 `mpcController` allows you to select among the nMPC controllers (Weighted, Rail and Carrot)
-2.2 `controller_settings_path` is the path of the `.yaml` file contained in the same folder of the Python script
-2.3 `controller_settings_destination` is the location of the `eagle_mpc_yaml` ROS package
-2.4 For the disturbance case, you can also set the properties of the simulated disturbance
+    1. `mpcController` allows you to select among the nMPC controllers (Weighted, Rail and Carrot)
+    2. `controller_settings_path` is the path of the `.yaml` file contained in the same folder of the Python script
+    3. `controller_settings_destination` is the location of the `eagle_mpc_yaml` ROS package
+    4. For the disturbance case, you can also set the properties of the simulated disturbance
 
