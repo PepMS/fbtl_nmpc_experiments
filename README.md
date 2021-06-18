@@ -21,7 +21,17 @@ git clone https://github.com/PepMS/fbtl_nmpc_experiments.git
 ```
 
 ### <a name="to"></a> Trajectory optimization
-To run a trajectory optimization experiment, you need to execute the selected Python script (with the `display` option in case that you want to visualize this in the Gepetto-Viewer). For example, for the *Eagle's Catch* case:
+To run a trajectory optimization experiment you need to do 2 steps:
+1. Modify the trajectory `.yaml` file with your paths. For example, open the `hexacopter370_flying_arm_3_eagle_catch.yaml` and change the `urdf` and the `follow` fields. Substitute the text between `<>` with the actual paths to the respective libraries.
+```yaml
+trajectory:
+  robot:
+    name: "hexacopter_370_flying_arm_3"
+    urdf: "<path-to-example-robot-data>/example-robot-data/robots/hexacopter370_description/urdf/hexacopter370_flying_arm_3.urdf"
+    follow: "<path-to-ros-ws>/src/eagle_mpc_ros/eagle_mpc_yaml/multicopter/hexacopter370.yaml"
+```
+
+2. Execute the selected Python script (with the `display` option in case that you want to visualize this in the Gepetto-Viewer). For example, for the *Eagle's Catch* case:
 ```
 cd <choose-your-path>/fbtl_nmpc_experiments/trajectory-optimization
 python3 eagle_catch.py display
