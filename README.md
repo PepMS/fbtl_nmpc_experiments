@@ -3,14 +3,15 @@ This repository contains the needed code to reproduce the experiments presented 
 
 ## Software dependencies
 ### EagleMPC
-- Install the [EagleMPC library](https://github.com/PepMS/eagle-mpc)
-- [Gepetto Viewer](https://github.com/Gepetto/gepetto-viewer-corba) to display the generated trajectories in the [Trajectory generation](#to) section.
+- Install the [EagleMPC library](https://github.com/PepMS/eagle-mpc) and its dependencies.
+
+:warning: **Crocoddyl version** :warning: To get the same results as in the paper, you should checkout the Crocoddyl repository to [this tag](https://github.com/PepMS/crocoddyl/releases/tag/fbtlnmpc_uam).
 ### EagleMPC-ROS
 The experiments to test the MPC controllers have been run in a simulated environment involving [Gazebo](http://gazebosim.org/) and [ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu). 
 Make sure both are installed intro your computer.
 
-Then, you need to clone and download the ROS packages in [EagleMPC-ROS](https://github.com/PepMS/eagle_mpc_ros). 
-The other required dependencies are explained in the documentation of this repository.
+Then, you need to clone and download the ROS packages in [EagleMPC-ROS](https://github.com/PepMS/eagle_mpc_ros).
+Follow the installation instructions from the repository.
 
 ## Experiments
 To run the different experiments you first need to clone this repository into your computer.
