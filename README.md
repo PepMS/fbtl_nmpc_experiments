@@ -37,9 +37,18 @@ cd <choose-your-path>/fbtl_nmpc_experiments/trajectory-optimization
 python3 eagle_catch.py display
 ```
 ### <a name="mpc"></a> nonLinear Model Predictive Control
-To run an nMPC experiment.
-1. Open the script of the experiment you want to run. For example `mpc/displacement/displacement.py`
-2. Set the variables in the section `# -----VARIABLES-----` to match your settings.
+To run an nMPC experiment. For example, the 4-Displacement experiment.
+1. Modify the file `mpc/displacement/hexacopter370_flying_arm_3_mpc.yaml`, which is placed inside the same folder as the Python script. Then, substitute the text between `<>` with the actual paths to the respective libraries.
+    ```yaml
+    trajectory:
+      robot:
+        name: "hexacopter_370_flying_arm_3"
+        urdf: "<path-to-example-robot-data>/example-robot-data/robots/hexacopter370_description/urdf/hexacopter370_flying_arm_3.urdf"
+        follow: "<path-to-ros-ws>/src/eagle_mpc_ros/eagle_mpc_yaml/multicopter/hexacopter370.yaml"
+    ```
+2. Analogously, modify the `yaml` file associated to the trajectory, either `4-displacement` (`hexacopter370_flying_arm_3_displacement.yaml`) or the `eagle_catch` (`hexacopter370_flying_arm_3_eagle_catch_nc.yaml`). These are placed inside the `eagle_mpc_yaml` ROS package.
+3. Open the script of the experiment you want to run. For example `mpc/displacement/displacement.py`
+4. Set the variables in the section `# -----VARIABLES-----` to match your settings.
     1. `mpcController` allows you to select among the nMPC controllers (Weighted, Rail and Carrot)
     2. `controller_settings_path` is the path of the `.yaml` file contained in the same folder of the Python script
     3. `controller_settings_destination` is the location of the `eagle_mpc_yaml` ROS package

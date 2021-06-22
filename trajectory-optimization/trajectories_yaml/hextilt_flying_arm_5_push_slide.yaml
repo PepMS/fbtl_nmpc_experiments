@@ -2,7 +2,7 @@ trajectory:
   robot:
     name: "hextilt_flying_arm_5"
     urdf: "/home/pepms/robotics/libraries/example-robot-data/robots/hextilt_description/urdf/hextilt_flying_arm_5.urdf"
-    follow: "/home/pepms/wsros/mpc-ws/src/eagle_mpc_ros/eagle_mpc_yaml/multicopter/hextilt.yaml"
+    follow: "/home/pepms/noetic_ws/mpc_ws/src/eagle_mpc_ros/eagle_mpc_yaml/multicopter/hextilt.yaml"
 
   initial_state: [0, 0, 1.0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 

@@ -9,8 +9,8 @@ mpcController = 'Carrot'  # ['Weighted', 'Rail', 'Carrot']
 
 # Paths
 controller_settings_path = "/home/pepms/robotics/paper-related/fbtl_nmpc_experiments/mpc/displacement/hexacopter370_flying_arm_3_mpc.yaml"
-controller_settings_destination = "/home/pepms/wsros/mpc-ws/src/eagle_mpc_ros/eagle_mpc_yaml/mpc/"
-launchPath = "/home/pepms/wsros/mpc-ws/src/eagle_mpc_ros/eagle_mpc_controller/launch/mpc_runner.launch"
+controller_settings_destination = "/home/pepms/noetic_ws/mpc_ws/src/eagle_mpc_ros/eagle_mpc_yaml/mpc/"
+launchPath = "/home/pepms/noetic_ws/mpc_ws/src/eagle_mpc_ros/eagle_mpc_controller/launch/mpc_runner.launch"
 
 # -----SCRIPT-----
 timeShutdown = 30
