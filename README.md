@@ -3,7 +3,7 @@ This repository contains the needed code to reproduce the experiments presented 
 
 ## Software dependencies
 ### EagleMPC
-- Install the [EagleMPC library](https://github.com/PepMS/eagle-mpc) and its dependencies.
+- Install the EagleMPC library at [this tag](https://github.com/PepMS/eagle-mpc/releases/tag/v0.0.1-fbtlnmpc_uam) and its dependencies.
 
 :warning: **Crocoddyl version** :warning: To get the same results as in the paper, you should checkout the Crocoddyl repository to [this tag](https://github.com/PepMS/crocoddyl/releases/tag/fbtlnmpc_uam).
 ### EagleMPC-ROS
